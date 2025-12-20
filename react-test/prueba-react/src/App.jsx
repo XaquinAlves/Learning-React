@@ -8,11 +8,19 @@ function App() {
     return (
         <>
             <Navigator />
-            <div>
-                <a href="https://vite.dev" target="_blank">
+            <div className="row justify-content-center justify-content-sm-center">
+                <a
+                    href="https://vite.dev"
+                    target="_blank"
+                    className=" col-1 col-sm-1"
+                >
                     <img src={viteLogo} className="logo" alt="Vite logo" />
                 </a>
-                <a href="https://react.dev" target="_blank">
+                <a
+                    href="https://react.dev"
+                    target="_blank"
+                    className="col-1 col-sm-1"
+                >
                     <img
                         src={reactLogo}
                         className="logo react"
@@ -20,18 +28,17 @@ function App() {
                     />
                 </a>
             </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
+            <h1 className="row justify-content-center justify-content-sm-center">
+                Vite + React
+            </h1>
+            <div className="row justify-content-center justify-content-sm-center">
+                <button
+                    onClick={() => setCount((count) => count + 1)}
+                    className="btn btn-primary col-2 col-sm-2"
+                >
                     count is {count}
                 </button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
             </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
         </>
     );
 }
@@ -40,7 +47,7 @@ export default App;
 
 export function Navigator() {
     return (
-        <div className="row">
+        <div className="row mb-3 mb-sm-3">
             <nav
                 className="navbar navbar-expand-lg bg-dark px-5 justify-content-between"
                 data-bs-theme="dark"
