@@ -25,14 +25,14 @@ export function Example() {
                 <a
                     href="https://vite.dev"
                     target="_blank"
-                    className=" col-1 col-sm-1"
+                    className=" col-1 col-md-1"
                 >
                     <img src={viteLogo} className="logo" alt="Vite logo" />
                 </a>
                 <a
                     href="https://react.dev"
                     target="_blank"
-                    className="col-1 col-sm-1"
+                    className="col-1 col-md-1"
                 >
                     <img
                         src={reactLogo}
@@ -47,7 +47,7 @@ export function Example() {
             <div className="row justify-content-center justify-content-sm-center">
                 <button
                     onClick={() => setCount((count) => count + 1)}
-                    className="btn btn-primary col-2 col-sm-2"
+                    className="btn btn-primary col-2 col-md-2"
                 >
                     count is {count}
                 </button>
@@ -59,7 +59,7 @@ export function Example() {
 
 export function Navigator() {
     return (
-        <header className="row mb-3 mb-sm-3" id="inicio">
+        <header className="row mb-3 mb-md-3 fs-5" id="inicio">
             <nav
                 className="navbar navbar-expand-lg bg-dark px-5 justify-content-between"
                 data-bs-theme="dark"
@@ -77,7 +77,7 @@ export function Navigator() {
                             Inicio
                         </a>
                     </li>
-                    <li className="nav-item dropdown-item">
+                    <li className="nav-item dropdown">
                         <a
                             className="nav-link dropdown-toggle"
                             href="#"
@@ -87,29 +87,44 @@ export function Navigator() {
                         >
                             Productos
                         </a>
-                        <ul className="dropdown-menu">
+                        <ul className="dropdown-menu bg-white fs-5">
                             <li>
-                                <a className="dropdown-item" href="#">
+                                <a
+                                    className="dropdown-item text-black"
+                                    href="#"
+                                >
                                     Computadoras
                                 </a>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                <a
+                                    className="dropdown-item text-black"
+                                    href="#"
+                                >
                                     Laptops
                                 </a>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                <a
+                                    className="dropdown-item text-black"
+                                    href="#"
+                                >
                                     Smartphones
                                 </a>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                <a
+                                    className="dropdown-item text-black"
+                                    href="#"
+                                >
                                     Drones
                                 </a>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                <a
+                                    className="dropdown-item text-black"
+                                    href="#"
+                                >
                                     Accesorios
                                 </a>
                             </li>
@@ -139,7 +154,7 @@ export function Navigator() {
 
 export function Carrousel() {
     return (
-        <div className="row mb-3 mb-sm-3 mx-5 mx-sm-5">
+        <div className="row mb-3 mb-md-3 mx-5 mx-md-5">
             <div
                 id="carouselCabecera"
                 className="carousel slide"
@@ -221,11 +236,15 @@ export function Carrousel() {
 
 export function Card({ imgSrc, title, text }) {
     return (
-        <div className="card me-sm-5" style={{ width: "25rem" }}>
+        <div
+            className="card"
+            style={{ width: "26rem" }}
+            key={`card-${title}`}
+        >
             <img src={imgSrc} className="card-img-top" alt="..." />
             <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{text}</p>
+                <h5 className="card-title fs-1">{title}</h5>
+                <p className="card-text text-secondary fw-light fs-4">{text}</p>
                 <a href="#" className="btn btn-primary me-1 me-sm-1">
                     Comprar
                 </a>
@@ -252,16 +271,16 @@ export function Galeria() {
     ];
 
     return (
-        <div className="row ms-5 me-3 ms-sm-5 me-sm-3">
+        <div className="row ms-5 me-5">
             <h2
-                className="text-center mt-5 mt-sm-5"
+                className="title text-center mt-5 mt-sm-5"
                 style={{ fontSize: "48px" }}
             >
                 Galería
             </h2>
             <hr className="mb-5 mb-sm-5 bg-secondary" />
             {cards.map((card) => (
-                <div className="col-3 col-sm-3 mb-5 mb-sm-5">
+                <div className="col-3 col-md-3 mb-5 mb-md-5">
                     <Card {...card} />
                 </div>
             ))}
@@ -271,16 +290,18 @@ export function Galeria() {
 
 export function Footer() {
     return (
-        <footer className="row ms-5 me-4 mb-5 mb-sm-5">
-            <hr className="mb-5 mb-sm-5"/>
-            <h4 className="text-secondary col-6 col-sm-6 mb-2 mb-sm-2" style={{fontWeight: "light"}}>IES Pazo da Merce</h4>
-            <a href="#inicio" className="col-6 col-sm-6 text-end text-sm-end">
+        <footer className="row mx-5 mb-5 mb-sm-5">
+            <hr className="mb-5 mb-sm-5" />
+            <h4 className="text-secondary col-6 col-sm-6 mb-2 mb-sm-2 fw-light">
+                IES Pazo da Merce
+            </h4>
+            <a href="#inicio" className="col-6 col-sm-6 text-end text-sm-end fs-5">
                 Subir en página
             </a>
-            <a href="#" className="link-primary col-1 col-sm-1">
+            <a href="#" className="link-primary col-1 col-md-1 ms-2 ms-md-2 fs-5">
                 Acerca de
             </a>
-            <a href="#" className="link-primary col-1 col-sm-1">
+            <a href="#" className="link-primary col-1 col-md-1 fs-5">
                 Contacto
             </a>
         </footer>
