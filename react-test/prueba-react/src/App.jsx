@@ -271,9 +271,9 @@ export function Galeria() {
 
 export function Footer() {
     return (
-        <footer className="row ms-5 me-4">
+        <footer className="row ms-5 me-4 mb-5 mb-sm-5">
             <hr className="mb-5 mb-sm-5"/>
-            <h4 className="text-secondary col-6 col-sm-6" style={{fontWeight: "light"}}>IES Pazo da Merce</h4>
+            <h4 className="text-secondary col-6 col-sm-6 mb-2 mb-sm-2" style={{fontWeight: "light"}}>IES Pazo da Merce</h4>
             <a href="#inicio" className="col-6 col-sm-6 text-end text-sm-end">
                 Subir en página
             </a>
